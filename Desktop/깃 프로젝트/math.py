@@ -1,11 +1,11 @@
-# 수확적 확률과 통계적 확률
+# 통계적 확률
 
-import random
-import matplotlib.pyplot as plt 
+import random                           # 통계적 확률을 계산하기 위한 random 라이브러리 가져오기
+import matplotlib.pyplot as plt         # 그래프를 그리프를 그리기 위한 random 라이브러리 가져오기
 
 def probability(num):
     랜덤숫자 = 0
-    주사위횟수 = [ 0, 0, 0, 0, 0, 0, 0]
+    주사위횟수 = [ 0, 0, 0, 0, 0, 0, 0] # 0번 인덱스 : 
 
     for i in range(num):
         랜덤숫자 = random.randint(1, 6)
@@ -47,8 +47,9 @@ def probability(num):
     print('표준편차는', (분산)**(1/2))
     print('-----------------------------')
     
-probability(10)
-probability(100)
-probability(200)
-probability(300)
-probability(400)
+
+while(True):
+    print('통계적 확률을 구하는 프로그램 입니다!')
+    in_num = int(input('몇번 주사위를 던지고 싶으신가요? '))
+
+    probability(in_num)
